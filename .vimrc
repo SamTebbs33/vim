@@ -11,7 +11,10 @@ Helptags
 set visualbell
 set confirm
 set autoindent
-let mapleader = "<space>"
+let mapleader = " "
+map <leader>q :q<CR>
+map <leader>w :w<CR>
+map <leader>x :wq<CR>
 set backspace=indent,eol,start
 " Make one line visible above and below cursor
 set scrolloff=1
@@ -51,4 +54,24 @@ let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 color jellybeans
 " Change line number foreground and background colours
 " highlight LineNr ctermfg=white ctermbg=darkgrey
-set t_Co=256
+
+" NERDTree
+let g:NERDTreeIndicatorMapCustom = {
+	\ "Modified"	: "~",
+	\ "Staged"		: "",
+	\ "Untracked"	: "",
+	\ "Renamed"		: "r",
+	\ "Unmerged"	: "",
+	\ "Deleted"		: "-",
+	\ "Dirty"		: "*",
+	\ "Clean"		: "",
+	\ "Unknown"		: "?"
+	\ }
+map <leader>t :NERDTreeToggle<CR>
+function! NtHlFile(ext, fg, bg, guifg, guibg)
+	exec 'autocmd filetype nerdtree highlight ' . a:ext . ' ctermbg=' . a:bg . ' ctermfg=' . a:fg . ' guibg=' . a:guibg . ' guifg=' . a:guifg
+	exec 'autocmd filetype nerdtree syn match ' . a:ext . ' #^\s\+.*' . a:ext . '$#'
+endfunction
+
+call NtHlFile("md", "blue", "none", "#3366FF", "#151515")
+call NtHlFile("vim", "cyan", "none", "cyan", "#151515")
