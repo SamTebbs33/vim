@@ -12,7 +12,14 @@ set visualbell
 set confirm
 set autoindent
 let mapleader = "<space>"
+set backspace=indent,eol,start
+" Make one line visible above and below cursor
+set scrolloff=1
+set display+=lastline
 
+" IndentLines
+let g:indentLine_color_tty_light = 7
+let g:indentLine_color_tty_dark = 1
 
 " Recommended settings for Syntastic
 set statusline+=%#warningmsg#
@@ -39,3 +46,8 @@ autocmd InsertLeave * set iminsert=0
 let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<s-tab>"
 let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+
+" Colour schemes
+color jellybeans
+" Change line number foreground and background colours
+" highlight LineNr ctermfg=white ctermbg=darkgrey

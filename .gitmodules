@@ -16,3 +16,27 @@
 [submodule "bundle/vim-gitgutter"]
 	path = bundle/vim-gitgutter
 	url = https://github.com/airblade/vim-gitgutter
+[submodule "bundle/delimitMate"]
+	path = bundle/delimitMate
+	url = https://github.com/Raimondi/delimitMate
+[submodule "bundle/indentLine"]
+	path = bundle/indentLine
+	url = https://github.com/Yggdroot/indentLine
+[submodule "bundle/gist-vim"]
+	path = bundle/gist-vim
+	url = https://github.com/mattn/gist-vim
+[submodule "bundle/jellybeans.vim"]
+	path = bundle/jellybeans.vim
+	url = https://github.com/nanotech/jellybeans.vim
+[submodule "bundle/vim-distinguished"]
+	path = bundle/vim-distinguished
+	url = https://github.com/Lokaltog/vim-distinguished
+[submodule "bundle/codeschool-vim-theme"]
+	path = bundle/codeschool-vim-theme
+	url = https://github.com/29decibel/codeschool-vim-theme
+[submodule "bundle/vim-phpcolors"]
+	path = bundle/vim-phpcolors
+	url = https://github.com/modess/vim-phpcolors
+[submodule "bundle/molokai"]
+	path = bundle/molokai
+	url = https://github.com/tomasr/molokai
