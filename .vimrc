@@ -54,6 +54,7 @@ let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 color jellybeans
 " Change line number foreground and background colours
 " highlight LineNr ctermfg=white ctermbg=darkgrey
+set t_Co=256
 
 " NERDTree
 let g:NERDTreeIndicatorMapCustom = {
