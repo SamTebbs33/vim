@@ -61,6 +61,3 @@
 [submodule "bundle/vim-autoformat"]
 	path = bundle/vim-autoformat
 	url = https://github.com/Chiel92/vim-autoformat
-[submodule "bundle/Caml-Vim-Mode"]
-	path = bundle/Caml-Vim-Mode
-	url = https://github.com/protz/Caml-Vim-Mode
