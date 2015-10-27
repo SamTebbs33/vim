@@ -84,3 +84,8 @@ endfunction
 
 call NtHlFile("md", "blue", "none", "#3366FF", "#151515")
 call NtHlFile("vim", "cyan", "none", "cyan", "#151515")
+
+# OCaml things
+let g:opamshare = substitute(system('opam config var share'),'\n$','',''')
+execute "set rtp+=" . g:opamshare . "/merlin/vim"
+let g:syntastic_ocaml_checkers = ['merlin']
