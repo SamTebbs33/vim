@@ -84,3 +84,6 @@ endfunction
 
 call NtHlFile("md", "blue", "none", "#3366FF", "#151515")
 call NtHlFile("vim", "cyan", "none", "cyan", "#151515")
+
+" OCaml things
+map <F12> :!ocaml < %<CR>
