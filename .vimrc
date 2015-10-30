@@ -15,10 +15,13 @@ let mapleader = " "
 map <leader>q :q<CR>
 map <leader>w :w<CR>
 map <leader>x :wq<CR>
+map <leader>f :Autoformat<CR>
 set backspace=indent,eol,start
 " Make one line visible above and below cursor
 set scrolloff=1
 set display+=lastline
+" Share clipboards across terminals
+set clipboard=unnamed
 
 " IndentLines
 let g:indentLine_color_tty_light = 7
@@ -51,23 +54,28 @@ let g:UltiSnipsJumpForwardTrigger="<s-tab>"
 let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 
 " Colour schemes
+set background=dark
 color jellybeans
 " Change line number foreground and background colours
 " highlight LineNr ctermfg=white ctermbg=darkgrey
 set t_Co=256
+" Fixes terminal colours for the solarized colourscheme
+let g:solarized_termcolors=256
+" Fixes terminal colours for the base16 colourscheme
+let base16colorspace=256
 
 " NERDTree
 let g:NERDTreeIndicatorMapCustom = {
-	\ "Modified"	: "~",
-	\ "Staged"		: "",
-	\ "Untracked"	: "",
-	\ "Renamed"		: "r",
-	\ "Unmerged"	: "",
-	\ "Deleted"		: "-",
-	\ "Dirty"		: "*",
-	\ "Clean"		: "",
-	\ "Unknown"		: "?"
-	\ }
+			\ "Modified"	: "~",
+			\ "Staged"		: "",
+			\ "Untracked"	: "",
+			\ "Renamed"		: "r",
+			\ "Unmerged"	: "",
+			\ "Deleted"		: "-",
+			\ "Dirty"		: "*",
+			\ "Clean"		: "",
+			\ "Unknown"		: "?"
+			\ }
 map <leader>t :NERDTreeToggle<CR>
 function! NtHlFile(ext, fg, bg, guifg, guibg)
 	exec 'autocmd filetype nerdtree highlight ' . a:ext . ' ctermbg=' . a:bg . ' ctermfg=' . a:fg . ' guibg=' . a:guibg . ' guifg=' . a:guifg
@@ -76,3 +84,6 @@ endfunction
 
 call NtHlFile("md", "blue", "none", "#3366FF", "#151515")
 call NtHlFile("vim", "cyan", "none", "cyan", "#151515")
+
+" OCaml things
+map <F12> :!ocaml < %<CR>
