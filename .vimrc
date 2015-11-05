@@ -17,6 +17,7 @@ map <leader>w :w<CR>
 map <leader>x :wq<CR>
 map <leader>f :Autoformat<CR>
 set backspace=indent,eol,start
+map <leader>r :so ~/.vimrc<CR>
 " Make one line visible above and below cursor
 set scrolloff=1
 set display+=lastline
@@ -86,4 +87,18 @@ call NtHlFile("md", "blue", "none", "#3366FF", "#151515")
 call NtHlFile("vim", "cyan", "none", "cyan", "#151515")
 
 " OCaml things
-map <F12> :!ocaml < %<CR>
+map <F12> :w! %<CR>:!clear && ocaml < %<CR>
+
+" Buffer things
+au BufAdd,BufNewFile * nested tab sball
+nnoremap <F5> :buffers<CR>:buffer<Space>
+nnoremap <leader>b :bp<CR>
+nnoremap <leader>n :bn<CR>
+nnoremap <leader>l :ls<CR>
+
+" Change swap
+if has("win32") || has("win64")
+	set directory=$TMP
+else
+	set directory=/tmp
+end
