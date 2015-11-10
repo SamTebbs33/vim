@@ -18,6 +18,7 @@ map <leader>x :wq<CR>
 map <leader>f :Autoformat<CR>
 set backspace=indent,eol,start
 map <leader>r :so ~/.vimrc<CR>
+map <leader>a ggVGG
 " Make one line visible above and below cursor
 set scrolloff=1
 set display+=lastline
