@@ -61,3 +61,6 @@
 [submodule "bundle/vim-autoformat"]
 	path = bundle/vim-autoformat
 	url = https://github.com/Chiel92/vim-autoformat
+[submodule "bundle/vim-exec"]
+	path = bundle/vim-exec
+	url = https://github.com/SamTebbs33/vim-exec

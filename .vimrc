@@ -1,6 +1,7 @@
 set nocompatible
 execute pathogen#infect()
 set number
+set numberwidth=1
 syntax on
 filetype plugin indent on
 set tabstop=4
@@ -12,13 +13,15 @@ set visualbell
 set confirm
 set autoindent
 let mapleader = " "
-map <leader>q :q<CR>
-map <leader>w :w<CR>
-map <leader>x :wq<CR>
-map <leader>f :Autoformat<CR>
+nnoremap <leader>q :q<CR>
+nnoremap <leader>w :w<CR>
+nnoremap <leader>x :wq<CR>
+nnoremap <leader>f :Autoformat<CR>
 set backspace=indent,eol,start
-map <leader>r :so ~/.vimrc<CR>
-map <leader>a ggVGG
+nnoremap <leader>r :so ~/.vimrc<CR>
+nnoremap <leader>a ggVGG
+" Create file when a non-exisiting file is opened
+au BufNewFile * :w
 " Make one line visible above and below cursor
 set scrolloff=1
 set display+=lastline
@@ -87,9 +90,6 @@ endfunction
 call NtHlFile("md", "blue", "none", "#3366FF", "#151515")
 call NtHlFile("vim", "cyan", "none", "cyan", "#151515")
 
-" OCaml things
-map <F12> :w! %<CR>:!clear && ocaml < %<CR>
-
 " Buffer things
 au BufAdd,BufNewFile * nested tab sball
 nnoremap <F5> :buffers<CR>:buffer<Space>
@@ -103,3 +103,7 @@ if has("win32") || has("win64")
 else
 	set directory=/tmp
 end
+
+" Vim exec
+let g:vim_exec_clear = 1
+let g:vim_exec_vimux = 0
