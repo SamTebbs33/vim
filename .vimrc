@@ -107,3 +107,8 @@ end
 " Vim exec
 let g:vim_exec_clear = 1
 let g:vim_exec_vimux = 0
+
+" Change vim shell to the standard shell
+if &shell =~# 'fish$'
+	set shell=sh
+endif

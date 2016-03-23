@@ -64,3 +64,12 @@
 [submodule "bundle/vim-exec"]
 	path = bundle/vim-exec
 	url = https://github.com/SamTebbs33/vim-exec
+[submodule "bundle/vitality.vim"]
+	path = bundle/vitality.vim
+	url = https://github.com/sjl/vitality.vim/
+[submodule "bundle/nerdcommenter"]
+	path = bundle/nerdcommenter
+	url = https://github.com/scrooloose/nerdcommenter
+[submodule "bundle/vim-fish"]
+	path = bundle/vim-fish
+	url = https://github.com/dag/vim-fish
