@@ -1,6 +1,7 @@
 set nocompatible
 execute pathogen#infect()
 set number
+set relativenumber
 set numberwidth=1
 syntax on
 filetype plugin indent on
@@ -12,7 +13,9 @@ Helptags
 set visualbell
 set confirm
 set autoindent
+set paste
 let mapleader = " "
+nnoremap <leader>c "*yy
 nnoremap <leader>q :q<CR>
 nnoremap <leader>w :w<CR>
 nnoremap <leader>x :wq<CR>
