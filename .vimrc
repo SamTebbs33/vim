@@ -1,7 +1,5 @@
 set nocompatible
 execute pathogen#infect()
-set number
-set relativenumber
 set numberwidth=1
 syntax on
 filetype plugin indent on
