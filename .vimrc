@@ -1,16 +1,27 @@
 set nocompatible
+set noshowmode
+set smarttab
+set ignorecase
+set smartcase
+set smartindent
+set autoindent
 execute pathogen#infect()
+set number
 set numberwidth=1
 syntax on
 filetype plugin indent on
 set tabstop=4
-set softtabstop=4
-set shiftwidth=4
-set noexpandtab
+set softtabstop=2
+set shiftwidth=2
+set expandtab
+set incsearch
+set completeopt=preview,menu,longest
+set wildignore+=*\\tmp\\*,*.swp,*.swo,*.zip,.git,.cabal-sandbox
+set wildmode=longest,list,full
+set wildmenu
 Helptags
 set visualbell
 set confirm
-set autoindent
 set paste
 let mapleader = " "
 nnoremap <leader>c "*yy
@@ -39,7 +50,7 @@ set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 
 let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
+let g:syntastic_auto_loc_list = 0
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 
@@ -48,6 +59,7 @@ let g:indent_guides_start_level = 2
 let g:indent_guides_guide_size = 1
 
 " Enabling vim-airline status bar
+let g:airline_theme='jellybeans'
 set laststatus=2
 set ttimeoutlen=50
 
@@ -113,3 +125,10 @@ let g:vim_exec_vimux = 0
 if &shell =~# 'fish$'
 	set shell=sh
 endif
+
+" GHC Mod stuff
+let $PATH = $PATH . ':' . expand('~/.cabal/bin')
+map <silent> tw :GhcModTypeInsert<CR>
+map <silent> ts :GhcModSplitFunCase<CR>
+map <silent> tq :GhcModType<CR>
+map <silent> te :GhcModTypeClear<CR>
