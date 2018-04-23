@@ -11,7 +11,7 @@
 	path = bundle/vim-airline-themes
 	url = https://github.com/vim-airline/vim-airline-themes
 [submodule "bundle/vim-numbertoggle"]
-	path = bundle/vim-number-toggle
+	path = bundle/vim-numbertoggle
 	url = https://github.com/jeffkreeftmeijer/vim-numbertoggle
 [submodule "bundle/vim-snipmate"]
 	path = bundle/vim-snipmate
