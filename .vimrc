@@ -1,3 +1,5 @@
+set exrc
+set secure
 set nocompatible
 set noshowmode
 set smarttab
